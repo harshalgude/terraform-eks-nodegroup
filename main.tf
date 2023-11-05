@@ -10,7 +10,7 @@ resource "aws_eks_cluster" "ankit-cluster" {
   role_arn = aws_iam_role.example.arn
 
   vpc_config {
-    subnet_ids = subnet-09877cfe32fb0169c
+    subnet_ids = ["subnet-09877cfe32fb0169c"]
   }
 
   # Ensure that IAM Role permissions are created before and deleted after EKS Cluster handling.
